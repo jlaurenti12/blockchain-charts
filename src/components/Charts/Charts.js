@@ -27,7 +27,7 @@ class Charts extends Component {
         this.props.data.map(({ x, y }) => {
           lineChartData.push({
             ts: moment((x)*1000).format('MMM DD YYYY'),
-            marketPrice: Math.round(y)
+            Price: Math.round(y)
            })
         })
         console.log(lineChartData)
@@ -46,9 +46,9 @@ class Charts extends Component {
             </linearGradient>
            </defs>
            <XAxis dataKey="ts" tick={{fontSize: 12}}/>
-           <Tooltip/>
+           <Tooltip content={"$"} />
            <ReferenceLine x="Dec 15 2017" stroke="green" label={{fontSize: 13, value:"Peak: $19,499"}}/>
-           <Area type='monotone' dataKey='marketPrice' stroke='#1E87F0' fill="url(#colorUv)" dot={false} />
+           <Area type='monotone' dataKey='Price' stroke='#1E87F0' fill="url(#colorUv)" dot={false} />
         </AreaChart>
       </ResponsiveContainer>
       <div>{ this.props.explanation }</div>

@@ -38,9 +38,9 @@ class Dashboard extends Component {
 
               <Stats
                 info={marketPrice}
-                title={'Current Price'}
+                title={'Market Price'}
                 unit={'USD'}
-                explanation={'Current price of a bitcoin in USD'}
+                explanation={'Average USD market price across major bitcoin exchanges.'}
               />
 
               <Stats
